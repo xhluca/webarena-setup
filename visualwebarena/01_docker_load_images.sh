@@ -16,9 +16,9 @@ load_docker_image() {
   local IMAGE_NAME="$1"
   local INPUT_FILE="$2"
 
-  if ! docker images --format "{{.Repository}}:{{.Tag}}" | grep -q "^${IMAGE_NAME}:"; then
+  if ! sudo docker images --format "{{.Repository}}:{{.Tag}}" | grep -q "^${IMAGE_NAME}:"; then
     echo "Loading Docker image ${IMAGE_NAME} from ${INPUT_FILE}"
-    docker load --input "${INPUT_FILE}"
+    sudo docker load --input "${INPUT_FILE}"
   else
     echo "Docker image ${IMAGE_NAME} is already loaded."
   fi

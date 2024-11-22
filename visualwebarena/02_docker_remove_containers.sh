@@ -3,6 +3,6 @@
 # stop if any error occur
 set -e
 
-docker stop classifieds_db classifieds forum shopping wikipedia
-docker remove classifieds_db classifieds forum shopping wikipedia
+sudo docker stop vwa_classifieds_db vwa_classifieds vwa_forum vwa_shopping vwa_wikipedia
+sudo docker remove vwa_classifieds_db vwa_classifieds vwa_forum vwa_shopping vwa_wikipedia
 

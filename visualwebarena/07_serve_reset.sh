@@ -6,7 +6,9 @@ set -e
 source 00_vars.sh
 
 # install flask in a venv
-apt install python3-venv -y
+if [ ! -d "venv_reset" ]; then
+    python3 -m venv venv_reset
+fi
 python3 -m venv venv_reset
 source venv_reset/bin/activate
 

@@ -1,17 +1,40 @@
 #!/bin/bash
 
 # PUBLIC_HOSTNAME=$(curl -s ifconfig.me)
-PUBLIC_HOSTNAME="YOUR_HOSTNAME_HERE"
+PUBLIC_HOSTNAME="http://localhost"
+
 
 # Change ports as desired
-SHOPPING_PORT=8082
-SHOPPING_ADMIN_PORT=8083
-REDDIT_PORT=8080
-GITLAB_PORT=9001
-WIKIPEDIA_PORT=8081
-MAP_PORT=443
-HOMEPAGE_PORT=80
-RESET_PORT=7565
+# CLASSIFIEDS_PORT=8083
+# SHOPPING_PORT=8082
+# REDDIT_PORT=8080
+# WIKIPEDIA_PORT=8081
+# HOMEPAGE_PORT=80
+# RESET_PORT=7565
+
+# Port: uupia
+# uu: two-digit user number, e.g. 20 -> nick, ..., 21 -> xing, ...
+# p: project number, e.g. 0 -> webarena, 1 -> visualwebarena
+# i: instance number, e.g. 0 -> instance for model a, 1 -> instance for model b, ...
+# a: application number, e.g. 0 -> homepage, 1 -> shopping, 2 -> classifieds, 3 -> reddit, 4 -> wikipedia, ...
+
+
+HOMEPAGE_PORT=21000
+SHOPPING_PORT=21001
+CLASSIFIEDS_PORT=21002
+REDDIT_PORT=21003
+WIKIPEDIA_PORT=21004
+RESET_PORT=21009
+
+# # Change ports as desired
+# SHOPPING_PORT=8082
+# SHOPPING_ADMIN_PORT=8083
+# REDDIT_PORT=8080
+# GITLAB_PORT=9001
+# WIKIPEDIA_PORT=8081
+# MAP_PORT=443
+# HOMEPAGE_PORT=80
+# RESET_PORT=7565
 
 # Original webarena ports
 # SHOPPING_PORT=7770

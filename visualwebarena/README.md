@@ -24,18 +24,28 @@ Edit `00_vars.sh` with your ports and hostname (or ip address). You can also cha
 
 Unzip the classifieds docker folder:
 ```sh
+# assuming you cloned and inside visualwebarena/
+
+# only once, do this in the visualwebarena folder
+# e.g. /mnt/research/scratch/users/xlu41/webarena/containers/
+ln -s /path/to/dir/with/containers containers
+
+cd containers/
+
+# unzip the classifieds docker folder
 unzip classifieds_docker_compose.zip
 ```
 
 Create a wiki folder and move the wikipedia file to it
 ```sh
+# assuming you cloned and inside visualwebarena/
 mkdir wiki
-mv wikipedia_en_all_maxi_2022-05.zim wiki/
+ln -s wikipedia_en_all_maxi_2022-05.zim wiki/wikipedia_en_all_maxi_2022-05.zim
 ```
 
 Load the docker image files
 ```sh
-sudo bash 01_docker_load_images.sh
+bash 01_docker_load_images.sh
 ```
 
 Once these three steps are completed, you can get rid of the downloaded files (or unmount your shared folder) as these won't be needed any more.
@@ -44,16 +54,16 @@ Once these three steps are completed, you can get rid of the downloaded files (o
 
 Easiest way is to start a tmux or screen session, then run scripts 01 to 06 in order. The last script serves the homepage and should stay up.
 ```bash
-sudo bash 02_docker_remove_containers.sh
-sudo bash 03_docker_create_containers.sh
-sudo bash 04_docker_start_containers.sh
-sudo bash 05_docker_patch_containers.sh
-sudo bash 06_serve_homepage.sh
+bash 02_docker_remove_containers.sh
+bash 03_docker_create_containers.sh
+bash 04_docker_start_containers.sh
+bash 05_docker_patch_containers.sh
+bash 06_serve_homepage.sh
 ```
 
 Optional: to start the reset server (automated full instance resets) run the following in a side tmux or screen terminal
 ```bash
-sudo bash 07_serve_reset.sh
+bash 07_serve_reset.sh
 ```
 
 Then you can trigger a full instance reset by accessing `http://${PUBLIC_HOSTNAME}:${RESET_PORT}/reset` check the instance status via `http://${PUBLIC_HOSTNAME}:${RESET_PORT}/reset`.

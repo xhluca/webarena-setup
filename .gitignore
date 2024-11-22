@@ -1,0 +1,8 @@
+*/venv*/*
+visualwebarena/classifieds_docker_compose/mysql/*
+**__pycache__*
+visualwebarena/reset_server/server.log
+visualwebarena/reset_server/fail_message
+visualwebarena/wiki
+visualwebarena/containers
+containers
