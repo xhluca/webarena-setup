@@ -36,11 +36,11 @@ cd containers/
 unzip classifieds_docker_compose.zip
 ```
 
-Create a wiki folder and move the wikipedia file to it
+Create a wiki folder and symlink the wikipedia file from `containers/` to it
 ```sh
 # assuming you cloned and inside visualwebarena/
 mkdir wiki
-ln -s wikipedia_en_all_maxi_2022-05.zim wiki/wikipedia_en_all_maxi_2022-05.zim
+ln -s containers/wikipedia_en_all_maxi_2022-05.zim wiki/wikipedia_en_all_maxi_2022-05.zim
 ```
 
 Load the docker image files
