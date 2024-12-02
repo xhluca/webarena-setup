@@ -37,6 +37,5 @@ WIKIPEDIA_URL="http://${PUBLIC_HOSTNAME}:${WIKIPEDIA_PORT}/wikipedia_en_all_maxi
 #  - postmill-populated-exposed-withimg.tar
 #  - wikipedia_en_all_maxi_2022-05.zim
 
-ARCHIVES_LOCATION="./containers"
-
-export WIKIPEDIA_DATA_DIR="/home/nlp/users/xlu41/scratch/webarena/containers"
+ARCHIVES_LOCATION="/home/nlp/users/xlu41/scratch/webarena/containers"
+WIKIPEDIA_DATA_DIR="/home/nlp/users/xlu41/scratch/webarena/containers"

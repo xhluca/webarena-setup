@@ -54,4 +54,5 @@ MAP_URL="http://${PUBLIC_HOSTNAME}:${MAP_PORT}"
 #  - openstreetmap-website.tar.gz
 #  - wikipedia_en_all_maxi_2022-05.zim
 
-ARCHIVES_LOCATION="./"
+ARCHIVES_LOCATION="/home/nlp/users/xlu41/scratch/webarena/containers"
+WIKIPEDIA_DATA_DIR="/home/nlp/users/xlu41/scratch/webarena/containers"
