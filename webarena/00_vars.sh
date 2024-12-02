@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # PUBLIC_HOSTNAME=$(curl -s ifconfig.me)
-PUBLIC_HOSTNAME="http://127.0.0.1"
+PUBLIC_HOSTNAME="127.0.0.1"
 
 
 # Change ports as desired
